@@ -37,7 +37,7 @@ stage ('Sorce Code Analysis') {
   stage ('Deplpoy to Tomcat') {
       steps {
       sshagent (['tomcat']) {
-        sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@65.1.94.119:/prod/apache-tomcat-8.5.98/webapps/webapp.war'
+        sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@13.127.152.99:/prod/apache-tomcat-8.5.98/webapps/webapp.war'
       }
     }
    }
